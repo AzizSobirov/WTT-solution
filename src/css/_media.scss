@@ -1,0 +1,122 @@
+@import 'other';
+
+@media (max-width:1024px){
+    #navbar{
+        padding: 0 5vw;
+        .logo{
+            img{
+                height: 25px;
+                width: 25px;
+            }
+            h2{
+                font-size: 1em;
+            }
+        }
+        .menu{
+            display: block;
+            height: 30px;
+            width: 30px;
+            appearance: none;
+            background: url(../assets/menu.png) center/cover;
+            filter: invert(1);
+            &:checked {
+                height: 20px;
+                width: 20px;
+                background: url(../assets/close.png) center/cover;
+                & ~ ul{
+                    padding: 5vh 5vw;
+                    height: 100vh;
+                }
+            }
+        }
+        ul{
+            position: fixed;
+            padding: 0 5vw;
+            top: 50px;
+            left: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 0vh;
+            width: 100%;
+            background: $bg;
+            z-index: 3;
+            transition:0.5s;
+            overflow: hidden;
+            li{
+                width: 100%;
+                align-items: flex-start;
+                transition: 0.5s;
+                overflow: hidden;
+                span{
+                    position: relative;
+                    padding: 10px;
+                    top: 0;
+                    width: 100%;
+                    margin: 0;
+                    box-shadow: none;
+                    background: transparent;
+                    a{
+                        position: relative;
+                        left: 0;
+                        padding: 7px;
+                        margin: 5px 0;
+                        width: 100%;
+                        transition: 0.5s;
+                        &:hover{
+                            left:10px;
+                            background: rgba(44, 53, 66, 0.698)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #home{
+        .home{
+            justify-content: flex-start;
+            align-items: center;
+            &_content{
+                min-width: 60vw;
+                flex-direction: column;
+                &-text{
+                    h2{
+                        font-size: 1.5em;
+                    }
+                }
+                span{
+                    margin-left: 0;
+                    margin-top: 20px;
+                    width: 90%;
+                    a{
+                        width: 100%;
+                        text-align: left;
+                        &:last-child{
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+            &_img{
+                height: auto;
+                align-self: flex-end;
+                transform: translateX(-30%);
+                img{
+                    width: 60vw;
+                }
+            }
+            &_rates{
+                width: 100%;
+                justify-content: space-between;
+                span{
+                    width: calc(100% / 3);
+                    img{width: 100%;}
+                }
+            }
+            &_mouse{
+                bottom: 0px;
+            }
+        }
+    }
+}
