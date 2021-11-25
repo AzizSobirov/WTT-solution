@@ -52,6 +52,11 @@
                     margin-left: 5px;
                     transition: 0.5s;
                 }
+                &.router-link-exact-active{
+                    padding: 5px 0;
+                    color: $main-color;
+                    box-shadow: 0 2.5px 0 $main-color;
+                }
             }
             span{
                 position: absolute;
@@ -76,11 +81,7 @@
     }
     .menu{
         display: none;
-    }
-    a.router-link-exact-active{
-        padding: 5px 0;
-        color: $main-color;
-        box-shadow: 0 2.5px 0 $main-color;
+        cursor: pointer;
     }
 }
 
@@ -156,15 +157,28 @@
         }
         &_rates{
             position: absolute;
-            padding: 7vh 5vw;
-            bottom: 0;
+            padding: 0vh 5vw;
+            bottom: 9vh;
             right: 0;
             @include center;
             color: #fff;
             white-space: nowrap;
-            span{
-                margin: 0 10px;
+            a{
+                color: #ff0066;
+                font-weight: 600;
                 @include center(center,center,column);
+                p{
+                    font-size: 14px;
+                }
+                img{
+                    width: 100%;
+                    &:last-child{
+                        margin-top: 5px;
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: 35px;
+                }
             }
         }
         &_mouse{
@@ -203,10 +217,81 @@
             }
         }
     }
-}
 
-// #martech{
-//     @include center;
-// }
+    .services{
+        min-width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        @include center(center,center,column);
+        .title{
+            align-self: flex-end;
+            h2{
+                margin-bottom: 5vh;
+                font-size: 3em;
+                text-align: right;
+                color: $main-color
+            }
+        }
+        ul{
+            width: 100%;
+            @include center;
+            transition:0.5s;
+            li{
+                padding: 20px;
+                transition: 0.5s;
+                h2{
+                    margin: 15px 0;
+                    font-size: 2em;
+                }
+                p{
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                    color: #ffffff90;
+                }
+                a{
+                    font-size: 1.3em;
+                    font-weight: 400;
+                    color: $main-color;
+                    @include center(center,space-between);
+                    b{
+                        font-weight: 400;
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+                &:hover{
+                    background:linear-gradient(142.68deg,#213133 7.14%,rgba(19,23,18,.79) 37.91%,rgba(19,23,18,.86) 63.67%,#213033 108.09%);
+                }
+            }
+        }
+        &_swiper{
+            margin-top: 20px;
+            display: none;
+            button{
+                margin: 0 5px;
+                font-size: 2em;                
+                color: $main-color;
+                background: transparent;
+                &:disabled{
+                    color: #949393;
+                }
+            }
+            .sliders {
+                @include center;
+                .slider{
+                    margin:0 5px;
+                    width:25px;
+                    height: 4px;
+                    background: #777;
+                    border-radius: 5px;
+                    &:hover,&.active{
+                        background: $main-color
+                    }
+                }
+            }
+        }
+    }
+}
 
 @import 'media';

@@ -78,7 +78,7 @@
             justify-content: flex-start;
             align-items: center;
             &_content{
-                min-width: 60vw;
+                min-width: 100%;
                 flex-direction: column;
                 &-text{
                     h2{
@@ -89,6 +89,9 @@
                     margin-left: 0;
                     margin-top: 20px;
                     width: 90%;
+                    p{
+                        font-size: 16px;
+                    }
                     a{
                         width: 100%;
                         text-align: left;
@@ -101,21 +104,64 @@
             &_img{
                 height: auto;
                 align-self: flex-end;
-                transform: translateX(-30%);
+                transform: translateX(-80%);
                 img{
-                    width: 60vw;
+                    width: 100%;
                 }
             }
             &_rates{
                 width: 100%;
-                justify-content: space-between;
-                span{
-                    width: calc(100% / 3);
-                    img{width: 100%;}
+                align-items: flex-start;
+                a{
+                    img{
+                        width: 60px;
+                    }
+                    &:not(:last-child){
+                        margin-right: 0px;
+                    }
+                    &:not(:first-child){
+                        margin-left: 15px;
+                    }
+                    &:last-child{
+                        position: relative;
+                        img:last-child{
+                            width:90px;
+                        }
+                    }
                 }
             }
             &_mouse{
                 bottom: 0px;
+            }
+        }
+
+        .services{
+            .title{
+                h2{
+                    font-size: 1.5em;
+                }
+            }
+            ul{
+                justify-content: flex-start;
+                li{
+                    min-width: 100%;
+                    background: linear-gradient(142.68deg,#213133 7.14%,rgba(19,23,18,.79) 37.91%,rgba(19,23,18,.86) 63.67%,#213033 108.09%);
+                    &:not(:last-child){
+                        margin-right: 0;
+                    }
+                    h2{
+                        font-size: 1.5em;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+            &_swiper{
+                @include center;
             }
         }
     }

@@ -1,8 +1,8 @@
 <template>
     <div id="navbar">
-        <div class="logo">'
+        <div class="logo">
             <img :src="require('../assets/logo.png')" alt="">
-            <h2>WTT SOLUTIONs</h2>
+            <router-link to='/'><h2>WTT SOLUTIONS</h2></router-link>
         </div>
         <input type="checkbox" class="menu">
         <ul>
