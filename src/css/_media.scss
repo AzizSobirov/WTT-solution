@@ -160,8 +160,21 @@
                     }
                 }
             }
-            &_swiper{
-                @include center;
+        }
+
+        .clients{
+            h2{
+                font-size: 1.5em;
+            }
+            ul {
+                li{
+                    min-width: 100%;
+                    background: linear-gradient(142.68deg,#213133 7.14%,rgba(19,23,18,.79) 37.91%,rgba(19,23,18,.86) 63.67%,#213033 108.09%);
+                    transform: rotateY(25deg);
+                    &.active{
+                        transform: rotateY(0deg);
+                    }
+                }
             }
         }
     }

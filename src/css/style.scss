@@ -50,7 +50,7 @@
                 i{
                     position: absolute;
                     margin-left: 5px;
-                    transition: 0.5s;
+
                 }
                 &.router-link-exact-active{
                     padding: 5px 0;
@@ -123,7 +123,7 @@
                     font-weight: 600;
                     background: $main-color;
                     border-radius: 5px;
-                    transition: 0.5s;
+
                     &:hover{
                         background: #136830;
                     }
@@ -155,7 +155,7 @@
                 width: 30vw;
             }
         }
-        &_rates{
+        &_rates span{
             position: absolute;
             padding: 0vh 5vw;
             bottom: 9vh;
@@ -235,10 +235,8 @@
         ul{
             width: 100%;
             @include center;
-            transition:0.5s;
             li{
                 padding: 20px;
-                transition: 0.5s;
                 h2{
                     margin: 15px 0;
                     font-size: 2em;
@@ -256,6 +254,9 @@
                     b{
                         font-weight: 400;
                     }
+                    i{
+                        font-size: 1.4em;
+                    }
                 }
                 &:not(:last-child){
                     margin-right: 20px;
@@ -265,30 +266,66 @@
                 }
             }
         }
-        &_swiper{
-            margin-top: 20px;
-            display: none;
-            button{
-                margin: 0 5px;
-                font-size: 2em;                
-                color: $main-color;
-                background: transparent;
-                &:disabled{
-                    color: #949393;
-                }
-            }
-            .sliders {
-                @include center;
-                .slider{
-                    margin:0 5px;
-                    width:25px;
-                    height: 4px;
-                    background: #777;
-                    border-radius: 5px;
-                    &:hover,&.active{
-                        background: $main-color
+    }
+
+    .clients{
+        min-width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        @include center(center,center,column);
+        h2{
+            align-self: flex-end;
+            color: $main-color;
+            font-size: 2.5em;
+        }
+        ul{
+            margin: 5vh 0;
+            width: 100%;
+            @include center(center,flex-start);
+            li{
+                min-width: 50%;
+                padding: 20px 30px;
+                .clients_text{
+                    margin-bottom: 10px;
+                    width: 100%;
+                    @include center(center,flex-start);
+                    img{
+                        width: 120px;
+                        margin-right: 20px;
                     }
                 }
+                p{
+                    margin: 5px 0;
+                    color: #ffffff90;
+                }
+                a{
+                    margin-top: 10px;
+                    color: $main-color;
+                    font-weight: 600;
+                    &:hover{
+                        color: #0d7230;
+                    }
+                }
+                &:hover{
+                    background:linear-gradient(142.68deg,#213133 7.14%,rgba(19,23,18,.79) 37.91%,rgba(19,23,18,.86) 63.67%,#213033 108.09%);
+                }
+            }
+        }
+        &_content{
+            width: 100%;
+            @include center(center,space-between);
+            span{
+                @include center;
+                a{
+                    color: #ff0066;
+                    @include center(center,center,column);
+                    &:not(:last-child){
+                        margin-right: 25px;
+                    }
+                }
+            }
+            #swiper{
+                @include center;
             }
         }
     }
