@@ -80,7 +80,7 @@
           <button @click="clientsPrev()" ><i class="ai-circle-chevron-left"></i
           ></button>
           <div class="sliders">
-              <div class="slider" v-for="index in clients" :key='index.id' @click='clientsSlideTo(index.id)'></div>
+              <div class="slider" v-for="index in clients" :key='index' @click='clientsSlideTo(index.id)'></div>
           </div>
           <button @click="clientsNext()"><i class="ai-circle-chevron-right"></i
           ></button>
@@ -275,7 +275,7 @@ export default {
     },
     clientsSlideTo(index){
       this.clientsSlide = index
-      this.service_sliderActive(this.clientsSlide)
+      this.clients_sliderActive(this.clientsSlide)
     },
     clients_sliderActive(index){
       let sliders = document.querySelectorAll(".clients .slider")

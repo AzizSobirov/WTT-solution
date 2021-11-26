@@ -164,9 +164,10 @@
 
         .clients{
             h2{
-                font-size: 1.5em;
+                font-size: 1em;
             }
             ul {
+                margin: 20px 0;
                 li{
                     min-width: 100%;
                     background: linear-gradient(142.68deg,#213133 7.14%,rgba(19,23,18,.79) 37.91%,rgba(19,23,18,.86) 63.67%,#213033 108.09%);
@@ -174,6 +175,11 @@
                     &.active{
                         transform: rotateY(0deg);
                     }
+                }
+            }
+            &_content{
+                span{
+                    display: none;
                 }
             }
         }
