@@ -71,6 +71,33 @@
         }
     }
 
+    #contact{
+        @include center(center,center,column);
+        .content{
+            height: auto;
+            span{
+                margin: 0;
+                height: auto;
+                padding: 10px;
+                width: 60%;
+                border-radius: 10px;
+                p{
+                    font-size: 16px;
+                }
+            }
+            img{
+                width: 40%;
+            }
+        }
+        &_form{
+            margin-top: 10px;
+            ul li{
+                margin-top: 15px;
+            }
+        }
+    }
+
+
     #home{
         .home{
             justify-content: flex-start;
@@ -229,6 +256,28 @@
                             margin-top: 20px;
                         }
                     }
+                }
+            }
+        }
+
+        .pains{
+            h2{
+                font-size: 1.25em;
+                text-align: right;
+            }
+            p{
+                font-size: 16px;
+                text-align: left;
+                color: #ffffffc5;
+            }
+            ul{
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                li{
+                    min-width: 100%;
+                    background: linear-gradient(142.68deg,#213133 7.14%,rgba(19,23,18,.79) 37.91%,rgba(19,23,18,.86) 63.67%,#213033 108.09%);
+
                 }
             }
         }

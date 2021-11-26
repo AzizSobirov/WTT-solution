@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Righteous&display=swap');
 @import url("https://unpkg.com/akar-icons-fonts/src/css/akar-icons.css");
 
 *,*::before,*::after{
@@ -55,9 +55,6 @@ $bg: #242b36;
 }
 
 .social-networks{
-    padding: 0vh 5vw;
-    bottom: 9vh;
-    right: 0;
     @include center;
     color: #fff;
     white-space: nowrap;
