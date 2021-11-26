@@ -7,7 +7,6 @@
     box-sizing: border-box;
     font-family: 'Montserrat',sans-serif;
     scroll-behavior: smooth;
-    transition: 0.5s;
 }
 
 *::-webkit-scrollbar{
@@ -22,10 +21,15 @@ input,button{
 a{
     color: #000;
     text-decoration: none;
+    transition: 0.5s;
 }
 
 ul {
     list-style: none;
+    transition: 0.5s;
+    li{
+        transition: 0.5s;
+    }
 }
 
 
@@ -39,14 +43,53 @@ $bg: #242b36;
     justify-content: $jc;
 }
 
+.btn{
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: 600;
+    background: $main-color;
+    border-radius: 5px;
+    &:hover{
+        background: #136830;
+    }
+}
+
+.social-networks{
+    padding: 0vh 5vw;
+    bottom: 9vh;
+    right: 0;
+    @include center;
+    color: #fff;
+    white-space: nowrap;
+    a{
+        color: #ff0066;
+        font-weight: 600;
+        transition: 0.5s;
+        @include center(center,center,column);
+        p{
+            font-size: 14px;
+        }
+        img{
+            &:last-child{
+                height: 25px;
+                margin-top: 15px;
+            }
+        }
+        &:not(:last-child){
+            margin-right: 35px;
+        }
+    }
+}
+
 #swiper{
-    margin-top: 20px;
     display: none;
     button{
         margin: 0 5px;
         font-size: 2em;                
         color: $main-color;
         background: transparent;
+        transition: 0.5s;
+        cursor: pointer;
         &:disabled{
             color: #949393;
         }
@@ -59,6 +102,8 @@ $bg: #242b36;
             height: 4px;
             background: #777;
             border-radius: 5px;
+            transition: 0.5s;
+            cursor: pointer;
             &:hover,&.active{
                 background: $main-color
             }
@@ -67,6 +112,31 @@ $bg: #242b36;
 }
 
 @media (max-width:1024px) {
+    .social-networks{
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        a{
+            width: 100px;
+            p{
+                font-size: 10px;
+            }
+            img{
+                width: 60px;
+                &:last-child{
+                    margin-top: 5px;
+                }
+            }
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+            &:last-child{
+                img:last-child{
+                    width:85px;
+                }
+            }
+        }
+    }
     #swiper{
         @include center();
     }

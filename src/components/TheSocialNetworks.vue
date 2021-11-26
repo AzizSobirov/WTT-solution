@@ -1,5 +1,5 @@
 <template>
-    <span>
+    <div class="social-networks">
         <router-link to="/"
           ><img
             src="https://wtt-solutions.com/images/socialNetwork/stars.svg"
@@ -20,5 +20,5 @@
             src="https://wtt-solutions.com/images/socialNetwork/goodfirms.svg"
             alt="img"
         /></router-link>
-    </span>
+    </div>
 </template>
