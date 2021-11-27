@@ -91,7 +91,7 @@
 
 #contact{
     max-width: 40vw;
-    @include center(center,space-between);
+    @include center(center,space-around);
     .content{
         height: 100vh;
         @include center(center,space-between);
@@ -100,7 +100,7 @@
             align-self: flex-end;
         }
         span{
-            margin: 0 0 200px 50px;
+            margin-bottom: 200px;
             padding: 30px;
             height: 200px;
             width: 250px;
@@ -146,7 +146,7 @@
                         transition: 1s;
                     }
                     &:focus{
-                        box-shadow: 0 0 0 2px #fff;
+                        box-shadow: 0 0 0 1.5px $main-color;
                         &::placeholder{
                             transform: translateX(-100%);
                         }
@@ -505,6 +505,86 @@
                 }
             }
         }
+    }
+}
+
+
+
+#footer{
+    padding: 5vh 5vw;
+    @include center(center,flex-end,column);
+    .footer_nav{
+        height: 50px;
+        width: 100%;
+        @include center(center,space-between);
+        &-logo{
+            @include center;
+            a{
+                margin-left: 10px;
+                color: #fff;
+            }
+        }
+        &-networks{
+            @include center(center,center,column);
+            p{
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            span a{
+                path{
+                    transition: 0.5s;
+                }
+                &:hover{
+                    path{
+                        fill: $main-color;
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    ul{
+        margin-top: 40px;
+        width: 100%;
+        @include center(flex-start,space-between);
+        li{
+            @include center(flex-start,center,column);
+            &:not(:last-child){
+                margin-right: 25px;
+            }
+            a{
+                margin-top: 20px;
+                color: #ffffffc5;
+                &:hover{
+                    color: $main-color;
+                    text-decoration: underline;
+                }
+            }
+            b{
+                color: $main-color;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            span{
+                margin: 10px 0;
+                width: 100%;
+                @include center(center,space-between);
+                a{
+                    margin: 0;
+                }
+                p:last-child{
+                    text-align: right;
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+    ul + p{
+        margin-top: 50px;
+        color: #ffffff85;
+        font-weight: 500;
     }
 }
 

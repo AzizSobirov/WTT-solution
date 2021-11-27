@@ -194,16 +194,18 @@
     </section>
 
     <contact title="HERE’S HOW YOU CAN GET IN TOUCH"></contact>
+    <Footer></Footer>
   </section>
 </template>
 
 <script>
 import SocialNetwork from "../components/TheSocialNetworks.vue";
 import Contact from "../components/TheContact.vue"
+import Footer from "../components/TheFooter.vue"
 export default {
   name: "Home",
   components: {
-    SocialNetwork,Contact
+    SocialNetwork,Contact,Footer
   },
   data() {
     return {

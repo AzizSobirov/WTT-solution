@@ -282,4 +282,20 @@
             }
         }
     }
+
+    #footer{
+        .footer_nav{
+            margin: 35px 0;
+            flex-direction: column;
+            &-networks{
+                margin-top: 10px;
+            }
+        }
+        ul li:not(:first-child){
+            display: none;
+        }
+        ul + p{
+            text-align: center;
+        }
+    }
 }
