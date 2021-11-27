@@ -159,6 +159,6 @@
         <router-link to="/">.NET</router-link>
       </li>
     </ul>
-    <p>Copyright 2016 – 2021 © WTT Solutions. All rights reserved.</p>
+    <p>Copyright - Aziz Sobirov</p>
   </section>
 </template>

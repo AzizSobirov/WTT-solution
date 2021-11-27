@@ -1,7 +1,8 @@
 <template>
     <div id="navbar">
         <div class="logo">
-            <img :src="require('../assets/logo.png')" alt="">
+            <!-- <img :src="require('../assets/logo.png')" alt=""> -->
+            <img src="https://wtt-solutions.com/logo.svg" alt="">
             <router-link to='/'><h2>WTT SOLUTIONS</h2></router-link>
         </div>
         <input type="checkbox" class="menu">

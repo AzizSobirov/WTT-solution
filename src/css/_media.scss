@@ -204,6 +204,10 @@
                 .social-networks{
                     margin-top: 15px;
                 }
+                #swiper{
+                    @include center;
+                    .slider:last-child{display: block;}
+                }
             }
         }
 

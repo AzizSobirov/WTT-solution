@@ -7,7 +7,7 @@
             MAKE YOUR EDTEC COMPANY MORE PROFITABLE WITH A RELIABLE TECH
             PARTNER.
           </h2>
-          <router-link to="/" class="btn">Get Started</router-link>
+          <a href="#services" class="btn">Get Started</a>
         </div>
         <span>
           <p>
